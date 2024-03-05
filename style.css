@@ -1,0 +1,29 @@
+#header {
+    padding: 20px;
+}
+
+.logo {
+    width: 120px;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.text {
+    position: absolute;
+    bottom: 115px;
+    right: 10px;
+    color: white;
+    font-size: 10px;
+    font-family: Arial, sans-serif;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0px 20px;
+}
+
+.content_img {
+    border-radius: 3%;
+    height: 150px;
+}
