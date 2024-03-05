@@ -50,21 +50,23 @@ const displayContents = (data) => {
         contents.innerHTML = html;
         return;
     }
+    
     data.forEach(element => {
+        let isVerified = element.authors[0].verified?`<i class="fa-solid fa-certificate" style="color:blue"></i>`:'';
         html += `
-            <div class="col-lg-3 col-md-3 col-12">
+            <div class="col-lg-3 col-md-3 col-12 p-0">
                 <div class='container'>
                     <div class="card border-0">
                         <img src="${element.thumbnail}" class="card-img-top content_img">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-3 d-flex justify-content-end">
+                                <div class="col-3 p-0">
                                     <img src="${element.authors[0].profile_picture}" style="width: 42px; height: 45px; border-radius: 30px;" alt="" />
                                     <div class="text">${getTime(element.others.posted_date)}</div>
                                 </div>
-                                <div class="col-9">
+                                <div class="col-9 p-0">
                                     <b>${element.title} </b> <br>
-                                    ${element.authors[0].profile_name}  <br> ${element.others.views} views
+                                    ${element.authors[0].profile_name} ${isVerified} <br> ${element.others.views} views
                                 </div>
                             </div>
                         </div>
